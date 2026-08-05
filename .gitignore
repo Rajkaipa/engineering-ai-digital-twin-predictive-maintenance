@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local data and model artifacts
+data/
+models/
+!data/.gitkeep
+!models/.gitkeep
+*.csv
+mlruns/
