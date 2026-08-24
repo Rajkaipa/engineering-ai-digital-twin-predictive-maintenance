@@ -1,0 +1,8 @@
+{
+  "n_vehicles": 5045,
+  "flagged": 3564,
+  "baseline_cost": 56100,
+  "model_cost": 37694,
+  "reduction_pct": 32.8,
+  "threshold": 0.03455938398838043
+}
