@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 
-from .config import COUNTER_COLS, HISTOGRAMS, RATE_COLS, CLASS_WINDOWS
+from .config import CLASS_WINDOWS, COUNTER_COLS, HISTOGRAMS, RATE_COLS
 
 
 def add_counter_features(df: pd.DataFrame) -> pd.DataFrame:

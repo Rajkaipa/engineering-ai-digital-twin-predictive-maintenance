@@ -1,14 +1,23 @@
 """Train the imminent-failure model end to end from raw CSVs."""
 import json
+
 import joblib
 import numpy as np
 import pandas as pd
 import xgboost as xgb
 
-from .config import (DATA_DIR, MODEL_DIR, COUNTER_COLS, RATE_COLS, RESET_COLS,
-                     SHARE_COLS, RANDOM_SEED, VAL_FRACTION)
+from .config import (
+    COUNTER_COLS,
+    DATA_DIR,
+    MODEL_DIR,
+    RANDOM_SEED,
+    RATE_COLS,
+    RESET_COLS,
+    SHARE_COLS,
+    VAL_FRACTION,
+)
+from .evaluate import budget_curve
 from .features import build_features, last_readout_per_vehicle
-from .evaluate import total_cost, budget_curve
 
 PARAMS = dict(
     objective="multi:softprob", num_class=5,
